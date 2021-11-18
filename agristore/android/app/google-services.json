@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "479587922139",
+    "project_id": "testfirebase-6464f",
+    "storage_bucket": "testfirebase-6464f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:479587922139:android:71554e56d8c3c2b6fd9cfe",
+        "android_client_info": {
+          "package_name": "com.example.agristore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "479587922139-ka0idb3r9gjr6etbs3lejh9g31senl93.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDP0cB1odkmcgYdh1gK3VN6uYCph9YszPo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "479587922139-ka0idb3r9gjr6etbs3lejh9g31senl93.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
