@@ -27,6 +27,7 @@ class MyApp extends StatelessWidget {
         ),
         StreamProvider(
           create: (context) => context.read<AuthService>().authStateChanges,
+          initialData: null,
         ),
       ],
       child: MaterialApp(
@@ -38,9 +39,11 @@ class MyApp extends StatelessWidget {
 }
 
 class AuthWrapper extends StatelessWidget {
+  const AuthWrapper({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    final user = context.watch<User>();
+    final User user = context.watch<User>();
 
     if (user != null) {
       return HomeScreen();

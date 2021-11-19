@@ -92,11 +92,12 @@ class _MainScreenState extends State<MainScreen> {
                             password,
                           )
                           .then((value) async {
-                        User user = FirebaseAuth.instance.currentUser;
+                        //cambie  User por var
+                        var user = FirebaseAuth.instance.currentUser;
 
                         await FirebaseFirestore.instance
                             .collection("users")
-                            .doc(user.uid)
+                            .doc(user!.uid)
                             .set({
                           'uid': user.uid,
                           'email': email,

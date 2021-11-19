@@ -7,8 +7,8 @@ class AuthService {
   final FirebaseAuth _auth;
 
   AuthService(this._auth);
-
-  Stream<User> get authStateChanges => _auth.idTokenChanges();
+  //agregue interrogacion
+  Stream<User?> get authStateChanges => _auth.idTokenChanges();
 
   Future<String> login(String email, String password) async {
     try {
@@ -25,9 +25,13 @@ class AuthService {
       await _auth
           .createUserWithEmailAndPassword(email: email, password: password)
           .then((value) async {
-        User user = FirebaseAuth.instance.currentUser;
+        //cambie User por var
+        var user = FirebaseAuth.instance.currentUser;
 
-        await FirebaseFirestore.instance.collection("users").doc(user.uid).set({
+        await FirebaseFirestore.instance
+            .collection("users")
+            .doc(user!.uid)
+            .set({
           'uid': user.uid,
           'email': email,
           'password': password,
