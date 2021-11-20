@@ -27,7 +27,7 @@ class _SignupScreenState extends State<SignupScreen> {
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back_ios,
-            color: Colors.black,
+            color: Colors.green,
             size: 30,
           ),
           onPressed: () => Navigator.of(context).pop(),
@@ -56,10 +56,10 @@ class _SignupScreenState extends State<SignupScreen> {
                             Hero(
                               tag: '1',
                               child: Text(
-                                "Sign up",
+                                "Inscribirse",
                                 style: TextStyle(
                                     fontSize: 30,
-                                    color: Colors.black,
+                                    color: Colors.green,
                                     fontWeight: FontWeight.bold),
                               ),
                             ),
@@ -70,14 +70,14 @@ class _SignupScreenState extends State<SignupScreen> {
                                 email = value.toString().trim();
                               },
                               validator: (value) => (value!.isEmpty)
-                                  ? ' Please enter email'
+                                  ? ' Porfavor escribe un Email'
                                   : null,
                               textAlign: TextAlign.center,
                               decoration: kTextFieldDecoration.copyWith(
-                                hintText: 'Enter Your Email',
+                                hintText: 'Ingresa un Email',
                                 prefixIcon: Icon(
                                   Icons.email,
-                                  color: Colors.black,
+                                  color: Colors.green,
                                 ),
                               ),
                             ),
@@ -86,7 +86,7 @@ class _SignupScreenState extends State<SignupScreen> {
                               obscureText: true,
                               validator: (value) {
                                 if (value!.isEmpty) {
-                                  return "Please enter Password";
+                                  return "Porfavor escribe una Contraseña";
                                 }
                               },
                               onChanged: (value) {
@@ -94,15 +94,15 @@ class _SignupScreenState extends State<SignupScreen> {
                               },
                               textAlign: TextAlign.center,
                               decoration: kTextFieldDecoration.copyWith(
-                                  hintText: 'Choose a Password',
+                                  hintText: 'Escribe una Contraseña',
                                   prefixIcon: Icon(
                                     Icons.lock,
-                                    color: Colors.black,
+                                    color: Colors.green,
                                   )),
                             ),
                             SizedBox(height: 80),
                             LoginSignupButton(
-                              title: 'Register',
+                              title: 'Registrate',
                               ontapp: () async {
                                 if (formkey.currentState!.validate()) {
                                   setState(() {
@@ -118,7 +118,7 @@ class _SignupScreenState extends State<SignupScreen> {
                                         content: Padding(
                                           padding: const EdgeInsets.all(8.0),
                                           child: Text(
-                                              'Sucessfully Register.You Can Login Now'),
+                                              'Regístrado correctamente. Puede iniciar sesión ahora'),
                                         ),
                                         duration: Duration(seconds: 5),
                                       ),
@@ -132,8 +132,7 @@ class _SignupScreenState extends State<SignupScreen> {
                                     showDialog(
                                       context: context,
                                       builder: (ctx) => AlertDialog(
-                                        title:
-                                            Text(' Ops! Registration Failed'),
+                                        title: Text(' Ops! Registro Fallido'),
                                         content: Text('${e.message}'),
                                         actions: [
                                           TextButton(

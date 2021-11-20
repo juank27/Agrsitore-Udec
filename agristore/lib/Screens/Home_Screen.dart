@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:agristore/Screens/Login_Screen.dart';
+import 'package:agristore/Component/button.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -22,7 +23,13 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('You have logged in Successfuly'),
+            Text(
+              'Bienvenido a AgriStore',
+              style: TextStyle(
+                  fontSize: 30,
+                  color: Colors.green,
+                  fontWeight: FontWeight.bold),
+            ),
             SizedBox(height: 50),
             Container(
               height: 60,
@@ -30,7 +37,10 @@ class _HomeScreenState extends State<HomeScreen> {
               child: ElevatedButton(
                   clipBehavior: Clip.hardEdge,
                   child: Center(
-                    child: Text('Log out'),
+                    child: Text('Cerrar sesión'),
+                  ),
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Colors.green),
                   ),
                   onPressed: () async {
                     await _signOut();

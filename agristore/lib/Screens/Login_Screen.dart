@@ -42,10 +42,10 @@ class _LoginScreenState extends State<LoginScreen> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
-                              "Sign In",
+                              "Bienvenido a AgriStore",
                               style: TextStyle(
                                   fontSize: 50,
-                                  color: Colors.black,
+                                  color: Colors.green,
                                   fontWeight: FontWeight.bold),
                             ),
                             SizedBox(height: 30),
@@ -56,7 +56,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               },
                               validator: (value) {
                                 if (value!.isEmpty) {
-                                  return "Please enter Email";
+                                  return "Porfavor ingresa el Email";
                                 }
                               },
                               textAlign: TextAlign.center,
@@ -64,7 +64,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 hintText: 'Email',
                                 prefixIcon: Icon(
                                   Icons.email,
-                                  color: Colors.black,
+                                  color: Colors.green,
                                 ),
                               ),
                             ),
@@ -73,7 +73,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               obscureText: true,
                               validator: (value) {
                                 if (value!.isEmpty) {
-                                  return "Please enter Password";
+                                  return "Porfavor ingresa la Contraseña";
                                 }
                               },
                               onChanged: (value) {
@@ -84,12 +84,12 @@ class _LoginScreenState extends State<LoginScreen> {
                                   hintText: 'Password',
                                   prefixIcon: Icon(
                                     Icons.lock,
-                                    color: Colors.black,
+                                    color: Colors.green,
                                   )),
                             ),
                             SizedBox(height: 80),
                             LoginSignupButton(
-                              title: 'Login',
+                              title: 'Iniciar Sesión',
                               ontapp: () async {
                                 if (formkey.currentState!.validate()) {
                                   setState(() {
@@ -112,7 +112,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                     showDialog(
                                       context: context,
                                       builder: (ctx) => AlertDialog(
-                                        title: Text("Ops! Login Failed"),
+                                        title: Text("Ops! Inicio Fallido"),
                                         content: Text('${e.message}'),
                                         actions: [
                                           TextButton(
@@ -144,7 +144,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               child: Row(
                                 children: [
                                   Text(
-                                    "Don't have an Account ?",
+                                    "No tienes una cuenta ?",
                                     style: TextStyle(
                                         fontSize: 20, color: Colors.black87),
                                   ),
@@ -152,11 +152,11 @@ class _LoginScreenState extends State<LoginScreen> {
                                   Hero(
                                     tag: '1',
                                     child: Text(
-                                      'Sign up',
+                                      'Registrate',
                                       style: TextStyle(
                                           fontSize: 21,
                                           fontWeight: FontWeight.bold,
-                                          color: Colors.black),
+                                          color: Colors.green),
                                     ),
                                   )
                                 ],
