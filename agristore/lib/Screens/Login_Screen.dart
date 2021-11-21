@@ -38,16 +38,22 @@ class _LoginScreenState extends State<LoginScreen> {
                       color: Colors.grey[200],
                       child: SingleChildScrollView(
                         padding:
-                            EdgeInsets.symmetric(horizontal: 25, vertical: 120),
+                            EdgeInsets.symmetric(horizontal: 25, vertical: 20),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
+                            Image.asset(
+                              'imagen/logo.png',
+                              height: 200.0,
+                              alignment: Alignment.bottomLeft,
+                            ),
                             Text(
                               "Bienvenido a AgriStore",
                               style: TextStyle(
                                   fontSize: 50,
                                   color: Colors.green,
                                   fontWeight: FontWeight.bold),
+                              textAlign: TextAlign.center,
                             ),
                             SizedBox(height: 30),
                             TextFormField(
@@ -88,7 +94,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                     color: Colors.green,
                                   )),
                             ),
-                            SizedBox(height: 80),
+                            SizedBox(height: 30),
                             LoginSignupButton(
                               title: 'Iniciar Sesión',
                               ontapp: () async {
@@ -133,7 +139,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 }
                               },
                             ),
-                            SizedBox(height: 30),
+                            SizedBox(height: 10),
                             GestureDetector(
                               onTap: () {
                                 Navigator.of(context).push(

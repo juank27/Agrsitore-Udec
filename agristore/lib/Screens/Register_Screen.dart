@@ -49,10 +49,15 @@ class _SignupScreenState extends State<SignupScreen> {
                       color: Colors.grey[200],
                       child: SingleChildScrollView(
                         padding:
-                            EdgeInsets.symmetric(horizontal: 25, vertical: 120),
+                            EdgeInsets.symmetric(horizontal: 25, vertical: 0),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
+                            Image.asset(
+                              'imagen/logo.png',
+                              height: 200.0,
+                              alignment: Alignment.bottomLeft,
+                            ),
                             Hero(
                               tag: '1',
                               child: Text(
@@ -100,7 +105,7 @@ class _SignupScreenState extends State<SignupScreen> {
                                     color: Colors.green,
                                   )),
                             ),
-                            SizedBox(height: 80),
+                            SizedBox(height: 40),
                             LoginSignupButton(
                               title: 'Registrate',
                               ontapp: () async {
