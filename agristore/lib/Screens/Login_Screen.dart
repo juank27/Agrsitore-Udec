@@ -17,6 +17,7 @@ class _LoginScreenState extends State<LoginScreen> {
   String email = '';
   String password = '';
   bool isloading = false;
+  //String pathImage = "/agristore/assets/img/logo.jpeg";
 
   @override
   Widget build(BuildContext context) {
