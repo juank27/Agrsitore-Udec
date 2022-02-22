@@ -30,11 +30,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
   static const List<BottomNavigationBarItem> _navigationItems =
       <BottomNavigationBarItem>[
-    BottomNavigationBarItem(icon: Icon(Icons.home), title: Text('Home')),
-    BottomNavigationBarItem(
-        icon: Icon(Icons.shopping_bag), title: Text('Compra')),
-    BottomNavigationBarItem(
-        icon: Icon(Icons.account_box), title: Text('Perfil')),
+    BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+    BottomNavigationBarItem(icon: Icon(Icons.shopping_bag), label: 'Compra'),
+    BottomNavigationBarItem(icon: Icon(Icons.account_box), label: 'Perfil'),
   ];
 
   void _onItemTapped(int index) {
